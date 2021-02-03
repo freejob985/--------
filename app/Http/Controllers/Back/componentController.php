@@ -96,6 +96,7 @@ class componentController extends Controller
             $componentup->portfolio($request, $id);
             return redirect()->back()->with('alert-success', 'تم التعديل بنجاح');
         } else if ($pag == "contact") {
+            dd($request->all());
             $componentup = new componentup();
             $componentup->contact($request, $id);
             return redirect()->back()->with('alert-success', 'تم التعديل بنجاح');
